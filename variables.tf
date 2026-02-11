@@ -24,13 +24,13 @@ EOT
     location                 = string
     name                     = string
     resource_group_name      = string
-    allow_classic_operations = optional(bool, false)
+    allow_classic_operations = optional(bool) # Default: false
     authorization_key        = optional(string)
     bandwidth_in_gbps        = optional(number)
     bandwidth_in_mbps        = optional(number)
     express_route_port_id    = optional(string)
     peering_location         = optional(string)
-    rate_limiting_enabled    = optional(bool, false)
+    rate_limiting_enabled    = optional(bool) # Default: false
     service_provider_name    = optional(string)
     tags                     = optional(map(string))
     sku = object({
