@@ -1,3 +1,7 @@
+output "express_route_circuits_id" {
+  description = "Map of id values across all express_route_circuits, keyed the same as var.express_route_circuits"
+  value       = { for k, v in azurerm_express_route_circuit.express_route_circuits : k => v.id }
+}
 output "express_route_circuits_allow_classic_operations" {
   description = "Map of allow_classic_operations values across all express_route_circuits, keyed the same as var.express_route_circuits"
   value       = { for k, v in azurerm_express_route_circuit.express_route_circuits : k => v.allow_classic_operations }
